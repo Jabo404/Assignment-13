@@ -27,9 +27,9 @@ The configuration details of each machine may be found below.
 | Name     |   Function  | IP Address | Operating System |
 |----------|-------------|------------|------------------|
 | Jump Box | Gateway     | 10.0.0.4   | Linux            |
-| DVWA 1   | Web Server  | 10.0.0.5   | Linux            |
-| DVWA 2   | Web Server  | 10.0.0.6   | Linux            |
-| ELK      | Monitoring  | 10.0.0.8   | Linux            |
+| Web 1    | Web Server  | 10.0.0.5   | Linux            |
+| DVWA 2   | Web Server  | 10.0.0.7   | Linux            |
+| ELK      | Monitoring  | 10.1.0.4   | Linux            |
 
 In addition to the above, Azure has provisioned a **load balancer** in front of all machines except for the jump box. The load balancer's targets are organized into the following availability zones:
 - **Availability Zone 1**: DVWA 1 + DVWA 2
@@ -55,10 +55,10 @@ A summary of the access policies in place can be found in the table below.
 
 | Name     | Publicly Accessible | Allowed IP Addresses |
 |----------|---------------------|----------------------|
-| Jump Box | Yes                 | 64.72.118.76         |
-| ELK      | No                  | 10.0.0.1-254         |
-| DVWA 1   | No                  | 10.0.0.1-254         |
-| DVWA 2   | No                  | 10.0.0.1-254         |
+| Jump Box | Yes                 | Home IP              |
+| ELK      | No                  | 10.0.0.4             |
+| DVWA 1   | No                  | 10.0.0.4             |
+| DVWA 2   | No                  | 10.0.0.4             |
 
 ### Elk Configuration
 
@@ -73,6 +73,8 @@ The playbook implements the following tasks:
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
 ![TODO: Update the path with the name of your screenshot of docker ps output](Images/docker_ps_output.png)
+![dockerPS](https://user-images.githubusercontent.com/28880848/110251632-647d2880-7f4f-11eb-99e6-2302abf27a78.PNG)
+
 
 The playbook is duplicated below.
 
