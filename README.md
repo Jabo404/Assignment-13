@@ -204,19 +204,18 @@ Next, you must create a `hosts` file to specify which VMs to run each playbook o
 
 ```bash
 $ cd /etc/ansible
-$ cat > hosts <<EOF
+$ cat > hosts 
 [webservers]
 10.0.0.5
 10.0.0.7
 
 [elk]
 10.1.0.4
-EOF
-```
+
 
 After this, the commands below run the playbook:
 
- ```bash
+
  $ cd /etc/ansible
  $ ansible-playbook install_elk.yml elk
  $ ansible-playbook install_filebeat.yml webservers
@@ -225,4 +224,4 @@ After this, the commands below run the playbook:
 
 To verify success, wait five minutes to give ELK time to start up. 
 
-Then, run: `curl http://10.0.0.8:5601`. This is the address of Kibana. If the installation succeeded, this command should print HTML to the console.
+Then, run: `curl http://10.1.0.4:5601`. This is the address of Kibana. If the installation succeeded, this command should print HTML to the console.
