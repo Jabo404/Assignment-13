@@ -32,7 +32,7 @@ The configuration details of each machine may be found below.
 | ELK      | Monitoring  | 10.1.0.4   | Linux            |
 
 In addition to the above, Azure has provisioned a **load balancer** in front of all machines except for the jump box. The load balancer's targets are organized into the following availability zones:
-- **Availability Zone 1**: DVWA 1 + DVWA 2
+- **Availability Zone 1**: Web1 + DVWA 2
 - **Availability Zone 2**: ELK
 
 ## ELK Server Configuration
@@ -132,7 +132,7 @@ The playbook is duplicated below.
 ```
 
 ### Target Machines & Beats
-This ELK server is configured to monitor the DVWA 1 and DVWA 2 VMs, at `10.0.0.5` and `10.0.0.7`, respectively.
+This ELK server is configured to monitor the Web 1 and DVWA 2 VMs, at `10.0.0.5` and `10.0.0.7`, respectively.
 
 We have installed the following Beats on these machines:
 - Filebeat
