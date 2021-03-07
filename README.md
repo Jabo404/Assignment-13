@@ -57,7 +57,7 @@ A summary of the access policies in place can be found in the table below.
 |----------|---------------------|----------------------|
 | Jump Box | Yes                 | Home IP              |
 | ELK      | No                  | 10.0.0.4             |
-| DVWA 1   | No                  | 10.0.0.4             |
+| Web 1    | No                  | 10.0.0.4             |
 | DVWA 2   | No                  | 10.0.0.4             |
 
 ### Elk Configuration
@@ -132,7 +132,7 @@ The playbook is duplicated below.
 ```
 
 ### Target Machines & Beats
-This ELK server is configured to monitor the DVWA 1 and DVWA 2 VMs, at `10.0.0.5` and `10.0.0.6`, respectively.
+This ELK server is configured to monitor the DVWA 1 and DVWA 2 VMs, at `10.0.0.5` and `10.0.0.7`, respectively.
 
 We have installed the following Beats on these machines:
 - Filebeat
@@ -207,10 +207,10 @@ $ cd /etc/ansible
 $ cat > hosts <<EOF
 [webservers]
 10.0.0.5
-10.0.0.6
+10.0.0.7
 
 [elk]
-10.0.0.8
+10.1.0.4
 EOF
 ```
 
